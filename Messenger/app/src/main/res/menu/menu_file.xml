@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/messages"
+        android:icon="@drawable/chat"
+        android:title="Сообщения"/>
+
+    <item
+        android:id="@+id/friends"
+        android:icon="@drawable/friends"
+        android:title="Друзья"/>
+
+    <item
+        android:id="@+id/friendsRequest"
+        android:icon="@drawable/friendsadd"
+        android:title="Запросы в друзья"/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Личный кабинет"/>
+</menu>

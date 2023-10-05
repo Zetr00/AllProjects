@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/Option"
+        android:title="Настройки"/>
+    <item android:id="@+id/dopolnitelno"
+        android:title="Дополнительно">
+        <menu>
+            <item android:id="@+id/About"
+                android:title="О программе"/>
+            <item android:id="@+id/Author"
+                android:title="Автор"/>
+            <item android:id="@+id/Money"
+                android:title="Помощь автору"/>
+        </menu>
+    </item>
+</menu>

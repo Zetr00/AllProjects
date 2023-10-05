@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GlobalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/lk"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:text="@string/login"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/loginEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:text="@string/password"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/saveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить изменения"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:text="Ваш баланс:"
+            android:textSize="20sp"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:text="0"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:text="рубл."
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edAddSum"
+                android:layout_marginRight="10sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:hint="Сумма пополнения"/>
+            <EditText
+                android:id="@+id/edUpdateSum"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:hint="Сумма списания"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/etCategory"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Категория"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btAddMoney"
+                android:layout_marginRight="5sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:text="Пополнить"/>
+            <Button
+                android:id="@+id/btEditMoney"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:text="Списать"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btAllAdd"
+                android:layout_marginRight="5sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:text="Все пополнения"/>
+            <Button
+                android:id="@+id/btAllUpdate"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:text="Все списания"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="205sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="Категории пополнений:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="18sp"
+                        android:id="@+id/tvCategoriesAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </ScrollView>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:isScrollContainer="true"
+                android:layout_width="205sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginRight="10sp"
+                    android:text="Категории списаний:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="18sp"
+                        android:id="@+id/tvCategoriesUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/unLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выйти"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
